@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hafsa Siraj — Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --p1:#7F77DD;--p2:#534AB7;--p3:#EEEDFE;--p4:#CECBF6;
+  --t1:#1D9E75;--t2:#0F6E56;--t3:#E1F5EE;
+  --c1:#D4537E;--c2:#993556;--c3:#FBEAF0;
+  --a1:#EF9F27;--a2:#BA7517;--a3:#FAEEDA;
+  --bg:#ffffff;--bg2:#f7f7f8;--text:#111111;--text2:#5f5f5f;--text3:#999999;--border:#e5e5e5;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);max-width:760px;margin:0 auto;line-height:1.6}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;border-bottom:0.5px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:50}
+.logo{font-size:17px;font-weight:600;color:var(--p1)}
+.nav-links{display:flex;gap:20px}
+.nav-links a{font-size:13px;color:var(--text2);text-decoration:none;cursor:pointer}
+.nav-links a:hover{color:var(--p1)}
+.hero{padding:52px 28px 44px;border-bottom:0.5px solid var(--border)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;background:var(--p3);color:var(--p2);font-size:12px;font-weight:500;padding:5px 14px;border-radius:99px;margin-bottom:20px}
+.hero h1{font-size:36px;font-weight:600;line-height:1.2;margin-bottom:14px}
+.hero h1 span{color:var(--p1)}
+.hero-sub{font-size:15px;color:var(--text2);line-height:1.75;max-width:540px;margin-bottom:24px}
+.hero-contact{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.hc-item{display:flex;align-items:center;gap:5px;font-size:13px;color:var(--text2)}
+.hc-item i{color:var(--p1)}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px}
+.btn-fill{display:inline-flex;align-items:center;gap:7px;padding:10px 22px;border-radius:10px;background:var(--p1);color:#fff;font-size:14px;font-weight:500;border:none;cursor:pointer;text-decoration:none}
+.btn-fill:hover{background:var(--p2)}
+.stat-row{display:flex;gap:28px;flex-wrap:wrap}
+.stat-num{font-size:22px;font-weight:600;color:var(--p1)}
+.stat-label{font-size:12px;color:var(--text3)}
+section{padding:44px 28px;border-bottom:0.5px solid var(--border)}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+.sec-pill{font-size:11px;font-weight:500;padding:3px 10px;border-radius:99px;background:var(--p3);color:var(--p2)}
+.sec-title{font-size:20px;font-weight:600}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.pcard{border-radius:14px;border:0.5px solid var(--border);background:var(--bg);overflow:hidden;transition:border-color .15s}
+.pcard:hover{border-color:var(--p1)}
+.pcard-accent{height:4px}
+.pcard-body{padding:16px}
+.pcard-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.pcard-title{font-size:15px;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.live-badge{font-size:10px;font-weight:500;padding:2px 8px;border-radius:99px;background:var(--t3);color:var(--t2);display:inline-flex;align-items:center;gap:4px}
+.live-dot{width:5px;height:5px;border-radius:50%;background:var(--t1)}
+.pcard-desc{font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:12px;margin-top:6px}
+.pcard-bottom{padding:10px 16px 14px;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+.tech-tags{display:flex;gap:5px;flex-wrap:wrap}
+.tech-tag{font-size:11px;padding:2px 8px;border-radius:6px;background:var(--bg2);color:var(--text2)}
+.pcard-links{display:flex;gap:10px}
+.pcard-link{font-size:12px;color:var(--p1);text-decoration:none;display:flex;align-items:center;gap:4px;font-weight:500}
+.skills-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px}
+.skill-card{border-radius:12px;padding:16px;border:0.5px solid var(--border);background:var(--bg)}
+.skill-card-head{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.skill-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px}
+.skill-card-title{font-size:13px;font-weight:600}
+.skill-list{display:flex;flex-direction:column;gap:5px}
+.skill-row{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--text2)}
+.dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.timeline{display:flex;flex-direction:column}
+.titem{display:flex;gap:16px;padding-bottom:28px}
+.titem:last-child{padding-bottom:0}
+.tleft{display:flex;flex-direction:column;align-items:center;width:16px;flex-shrink:0}
+.tdot{width:14px;height:14px;border-radius:50%;border:2.5px solid var(--p1);background:var(--bg);flex-shrink:0;margin-top:3px}
+.tline{flex:1;width:1.5px;background:var(--p4);margin-top:4px}
+.titem:last-child .tline{display:none}
+.t-date{font-size:11px;font-weight:500;background:var(--p3);color:var(--p2);display:inline-flex;padding:2px 10px;border-radius:99px;margin-bottom:8px}
+.t-role{font-size:15px;font-weight:600;margin-bottom:2px}
+.t-org{font-size:13px;color:var(--p1);margin-bottom:8px;font-weight:500}
+.t-desc{font-size:13px;color:var(--text2);line-height:1.65}
+.contact-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:20px}
+.ccard{border-radius:12px;padding:14px;border:0.5px solid var(--border);display:flex;align-items:center;gap:12px;background:var(--bg);text-decoration:none;color:inherit;transition:border-color .15s}
+.ccard:hover{border-color:var(--p1)}
+.cicon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.clabel{font-size:11px;color:var(--text3);margin-bottom:2px}
+.cvalue{font-size:13px;font-weight:500;color:var(--text)}
+.footer-note{font-size:12px;color:var(--text3);text-align:center;padding-top:18px}
+.cert-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.cert-badge{display:inline-flex;align-items:center;gap:6px;background:var(--a3);color:var(--a2);font-size:12px;font-weight:500;padding:5px 12px;border-radius:99px}
+@media(prefers-color-scheme:dark){
+  :root{--bg:#111111;--bg2:#1a1a1a;--text:#f0f0f0;--text2:#a0a0a0;--text3:#707070;--border:#2a2a2a}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="logo">Hafsa Siraj</span>
+  <div class="nav-links">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow"><i class="ti ti-sparkles" aria-hidden="true"></i> Open to opportunities</div>
+  <h1>Hi, I'm <span>Hafsa Siraj</span><br>I build software that matters.</h1>
+  <p class="hero-sub">Software Engineering student at PUCIT with a strong foundation in C#, ASP.NET, and SQL. Passionate about full-stack development and AI — bridging technical execution with real-world impact.</p>
+  <div class="hero-contact">
+    <span class="hc-item"><i class="ti ti-map-pin" aria-hidden="true"></i> Lahore, Pakistan</span>
+    <span class="hc-item"><i class="ti ti-mail" aria-hidden="true"></i> hafsas.0099@gmail.com</span>
+    <span class="hc-item"><i class="ti ti-phone" aria-hidden="true"></i> +92 309 1749128</span>
+  </div>
+  <div class="hero-btns">
+    <a class="btn-fill" href="#projects"><i class="ti ti-folder" aria-hidden="true"></i> See my work</a>
+  </div>
+  <div class="stat-row">
+    <div><div class="stat-num">3+</div><div class="stat-label">Projects built</div></div>
+    <div><div class="stat-num">3+</div><div class="stat-label">Years of coding</div></div>
+    <div><div class="stat-num">1</div><div class="stat-label">Live deployment</div></div>
+    <div><div class="stat-num">2027</div><div class="stat-label">Expected graduation</div></div>
+  </div>
+</div>
+
+<section id="projects">
+  <div class="sec-header"><span class="sec-pill">Work</span><span class="sec-title">Projects</span></div>
+  <div class="projects-grid">
+
+    <div class="pcard">
+      <div class="pcard-accent" style="background:var(--p1)"></div>
+      <div class="pcard-body">
+        <div class="pcard-icon" style="background:var(--p3)"><i class="ti ti-layout-kanban" style="color:var(--p1)" aria-hidden="true"></i></div>
+        <p class="pcard-title">
+          Task Tracker
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </p>
+        <p class="pcard-desc">A fully Dockerized Jira-style project manager built with ASP.NET, deployed live on Railway. Features real-time "no-refresh" dashboard updates via SignalR, documented with Swagger, and tested with Postman. REST API backend with EF Core and SQL Server.</p>
+      </div>
+      <div class="pcard-bottom">
+        <div class="tech-tags">
+          <span class="tech-tag">ASP.NET</span>
+          <span class="tech-tag">SignalR</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Railway</span>
+          <span class="tech-tag">EF Core</span>
+          <span class="tech-tag">Swagger</span>
+        </div>
+        <div class="pcard-links">
+          <a class="pcard-link" href="#" target="_blank"><i class="ti ti-external-link" aria-hidden="true"></i> Live</a>
+          <a class="pcard-link" href="#" target="_blank"><i class="ti ti-brand-github" aria-hidden="true"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-accent" style="background:var(--c1)"></div>
+      <div class="pcard-body">
+        <div class="pcard-icon" style="background:var(--c3)"><i class="ti ti-quote" style="color:var(--c1)" aria-hidden="true"></i></div>
+        <p class="pcard-title">Daily Quotes Manager</p>
+        <p class="pcard-desc">Android app with Firebase Auth and Realtime Database for secure login and quote syncing. Features daily quote, dark/light theme, and 30 pre-loaded motivational quotes.</p>
+      </div>
+      <div class="pcard-bottom">
+        <div class="tech-tags">
+          <span class="tech-tag">Kotlin</span>
+          <span class="tech-tag">Compose</span>
+          <span class="tech-tag">Firebase</span>
+          <span class="tech-tag">Material 3</span>
+        </div>
+        <a class="pcard-link" href="https://github.com/Hafsa-Siraj-se/DailyQuotesManager" target="_blank"><i class="ti ti-brand-github" aria-hidden="true"></i> GitHub</a>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-accent" style="background:var(--a1)"></div>
+      <div class="pcard-body">
+        <div class="pcard-icon" style="background:var(--a3)"><i class="ti ti-car" style="color:var(--a2)" aria-hidden="true"></i></div>
+        <p class="pcard-title">Parking Management System</p>
+        <p class="pcard-desc">Backend system applying OOP principles — Encapsulation and Polymorphism — to automate parking slot allocation with time-stamped vehicle entry and exit tracking.</p>
+      </div>
+      <div class="pcard-bottom">
+        <div class="tech-tags">
+          <span class="tech-tag">C++</span>
+          <span class="tech-tag">OOP</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="sec-header"><span class="sec-pill">Toolkit</span><span class="sec-title">Skills</span></div>
+  <div class="skills-wrap">
+    <div class="skill-card">
+      <div class="skill-card-head">
+        <div class="skill-icon" style="background:var(--p3)"><i class="ti ti-code" style="color:var(--p1)" aria-hidden="true"></i></div>
+        <span class="skill-card-title">Languages</span>
+      </div>
+      <div class="skill-list">
+        <div class="skill-row"><div class="dot" style="background:var(--p1)"></div>C / C++ / C#</div>
+        <div class="skill-row"><div class="dot" style="background:var(--p1)"></div>Python</div>
+        <div class="skill-row"><div class="dot" style="background:var(--p1)"></div>Kotlin</div>
+        <div class="skill-row"><div class="dot" style="background:var(--p1)"></div>SQL / PL/SQL</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-head">
+        <div class="skill-icon" style="background:var(--t3)"><i class="ti ti-world" style="color:var(--t1)" aria-hidden="true"></i></div>
+        <span class="skill-card-title">Web & Mobile</span>
+      </div>
+      <div class="skill-list">
+        <div class="skill-row"><div class="dot" style="background:var(--t1)"></div>ASP.NET / .NET</div>
+        <div class="skill-row"><div class="dot" style="background:var(--t1)"></div>REST API / EF Core</div>
+        <div class="skill-row"><div class="dot" style="background:var(--t1)"></div>SignalR / Ajax</div>
+        <div class="skill-row"><div class="dot" style="background:var(--t1)"></div>Jetpack Compose</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-head">
+        <div class="skill-icon" style="background:var(--c3)"><i class="ti ti-database" style="color:var(--c1)" aria-hidden="true"></i></div>
+        <span class="skill-card-title">Database</span>
+      </div>
+      <div class="skill-list">
+        <div class="skill-row"><div class="dot" style="background:var(--c1)"></div>SQL Server</div>
+        <div class="skill-row"><div class="dot" style="background:var(--c1)"></div>SQLite</div>
+        <div class="skill-row"><div class="dot" style="background:var(--c1)"></div>Oracle SQL</div>
+        <div class="skill-row"><div class="dot" style="background:var(--c1)"></div>3NF / Schema Design</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-head">
+        <div class="skill-icon" style="background:var(--a3)"><i class="ti ti-tools" style="color:var(--a2)" aria-hidden="true"></i></div>
+        <span class="skill-card-title">Tools</span>
+      </div>
+      <div class="skill-list">
+        <div class="skill-row"><div class="dot" style="background:var(--a2)"></div>Docker</div>
+        <div class="skill-row"><div class="dot" style="background:var(--a2)"></div>Postman</div>
+        <div class="skill-row"><div class="dot" style="background:var(--a2)"></div>Swagger</div>
+        <div class="skill-row"><div class="dot" style="background:var(--a2)"></div>Git / GitHub / Jira</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="sec-header"><span class="sec-pill">Journey</span><span class="sec-title">Experience & Education</span></div>
+  <div class="timeline">
+    <div class="titem">
+      <div class="tleft"><div class="tdot"></div><div class="tline"></div></div>
+      <div>
+        <div class="t-date">2023 – Expected 2027</div>
+        <p class="t-role">BS Software Engineering</p>
+        <p class="t-org">Punjab University — PUCIT, Lahore</p>
+        <p class="t-desc">Core focus on software engineering, databases, mobile development, algorithms, and AI/ML fundamentals.</p>
+      </div>
+    </div>
+    <div class="titem">
+      <div class="tleft"><div class="tdot"></div><div class="tline"></div></div>
+      <div>
+        <div class="t-date">Present</div>
+        <p class="t-role">Marketing Head</p>
+        <p class="t-org">FCIT Developers Club</p>
+        <p class="t-desc">Spearheading digital marketing strategies to increase student engagement and promote technical workshops across the faculty.</p>
+      </div>
+    </div>
+    <div class="titem">
+      <div class="tleft"><div class="tdot"></div></div>
+      <div>
+        <div class="t-date">Present</div>
+        <p class="t-role">Vice President</p>
+        <p class="t-org">FCIT Sports Society OC</p>
+        <p class="t-desc">Managing a 20+ member volunteer team to execute campus-wide sporting events and oversee budget allocation.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cert-row">
+    <span class="cert-badge"><i class="ti ti-award" aria-hidden="true"></i> Competitive Programming — Code Bees</span>
+    <span class="cert-badge"><i class="ti ti-award" aria-hidden="true"></i> PUCON 2025 Participant</span>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="sec-header"><span class="sec-pill">Connect</span><span class="sec-title">Get in touch</span></div>
+  <div class="contact-wrap">
+    <a class="ccard" href="mailto:hafsas.0099@gmail.com">
+      <div class="cicon" style="background:var(--p3)"><i class="ti ti-mail" style="color:var(--p1)" aria-hidden="true"></i></div>
+      <div><p class="clabel">Email</p><p class="cvalue">hafsas.0099@gmail.com</p></div>
+    </a>
+    <a class="ccard" href="https://github.com/Hafsa-Siraj-se" target="_blank">
+      <div class="cicon" style="background:var(--bg2)"><i class="ti ti-brand-github" style="color:var(--text)" aria-hidden="true"></i></div>
+      <div><p class="clabel">GitHub</p><p class="cvalue">Hafsa-Siraj-se</p></div>
+    </a>
+    <a class="ccard" href="https://www.linkedin.com/in/hafsa-siraj-6680622a5/" target="_blank">
+      <div class="cicon" style="background:#e8f0fe"><i class="ti ti-brand-linkedin" style="color:#0a66c2" aria-hidden="true"></i></div>
+      <div><p class="clabel">LinkedIn</p><p class="cvalue">hafsa-siraj</p></div>
+    </a>
+    <div class="ccard">
+      <div class="cicon" style="background:var(--t3)"><i class="ti ti-map-pin" style="color:var(--t1)" aria-hidden="true"></i></div>
+      <div><p class="clabel">Location</p><p class="cvalue">Lahore, Pakistan</p></div>
+    </div>
+  </div>
+  <p class="footer-note">Built with passion — Hafsa Siraj &copy; 2025 &middot; PUCIT, Punjab University</p>
+</section>
+
+</body>
+</html>
